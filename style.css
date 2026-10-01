@@ -1,0 +1,36 @@
+:root { --ink: #242926; --muted: #59645d; --paper: #fafbf9; --green: #185e48; --red: #a53730; --line: #d9dfd9; }
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: var(--paper); font: 18px/1.65 Georgia, 'Times New Roman', serif; letter-spacing: 0; }
+a { color: var(--green); text-underline-offset: 4px; overflow-wrap: anywhere; }
+a:hover { color: var(--red); }
+a:focus-visible { outline: 3px solid var(--red); outline-offset: 5px; }
+header, footer { max-width: 1080px; margin: auto; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+header { border-bottom: 1px solid var(--line); }
+.brand { font-size: 24px; font-weight: bold; text-decoration: none; color: var(--ink); }
+nav { display: flex; gap: 24px; font-size: 16px; }
+nav [aria-current] { color: var(--ink); font-weight: bold; }
+main { max-width: 1080px; margin: auto; }
+.intro { padding: 56px 32px 48px; background-image: linear-gradient(#d9dfd944 1px, transparent 1px), linear-gradient(90deg, #d9dfd944 1px, transparent 1px); background-size: 64px 64px; }
+.app-icon { display: block; width: 128px; height: 128px; border-radius: 8px; margin-bottom: 28px; }
+.eyebrow { color: var(--red); font: 13px/1.5 'Trebuchet MS', sans-serif; text-transform: uppercase; letter-spacing: 0; }
+h1 { font-size: 64px; line-height: 1.1; margin: 12px 0 24px; overflow-wrap: anywhere; }
+h2 { font-size: 25px; line-height: 1.3; margin: 0 0 14px; }
+p { margin: 0 0 20px; max-width: 720px; }
+.lead { font-size: 25px; line-height: 1.5; }
+.details { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 40px 32px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.details p { color: var(--muted); }
+.contact { padding: 40px 32px; }
+.document { max-width: 840px; padding: 48px 32px; }
+.document h1 { font-size: 44px; }
+.document section { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); }
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+@media (max-width: 600px) {
+  header, footer { padding: 20px; gap: 16px; flex-wrap: wrap; }
+  nav { gap: 16px; }
+  .intro, .document { padding: 36px 20px; }
+  h1 { font-size: 48px; }
+  .document h1 { font-size: 36px; }
+  .lead { font-size: 22px; }
+  .details { grid-template-columns: 1fr; padding: 28px 20px; gap: 20px; }
+  .contact { padding: 32px 20px; }
+}
